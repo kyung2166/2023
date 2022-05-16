@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <title>Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-title" content="Portfolio">
+    <meta name="description" content="2022 Portfolio">
+    <!--초기화-->
+    <style>
+        a {
+        margin:0;
+        padding:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+        }
+        a:link {text-decoration:none; color:#353535;}
+        a:visited {text-decoration:none; color:#353535;}
+        p {font-size: 13px; font-family: Arial, Helvetica, sans-serif; line-height: 170%; text-align: justify; text-indent: 10px;}
+        
+    </style>
+    <!--헤더-->
+    <style>
+        #main_header {
+            /* 중앙 정렬*/
+            width: 1060px; margin: 0 auto;
+            /*절대 좌표*/
+            height: 150px;
+            position: relative;
+            }
+        #main_header > #title {
+            position: absolute;
+            left: 0px; top: 33px;
+            }   
+        #main_header > #main_gnb {
+            position: absolute;
+            right: 0px; top: 20px;
+            font-size: small
+            }
+        #main_header > #main_gnb .button {
+            width: 140px;
+            height: 33px;
+            border: 10px solid #ffffff;
+            font-size: 15px;
+            background-color: #eeeeee;
+            border: none;
+            color: rgb(117, 117, 117);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            transition: 0.5s;
+        }
+        #main_header > #main_gnb .button:hover {
+            background-color: #ffb20b;
+            color: #ffffff;
+        }
+    </style>
+    <!--로칼네비게이터-->
+    <style>
+        #lnb_grid {
+            /* 중앙 정렬*/
+            width: 1060px; margin: 0 auto;
+            /*절대 좌표*/
+            height: 75px;
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            position: relative;
+        }
+        #lnb_grid > #left {
+            background-color: #eeeeee;
+        }
+        #lnb_grid > #left .box {
+            background-color: #eeeeee;
+            position: absolute;    
+        }
+        #lnb_grid > #right .column {
+            margin-left: 7px;
+        }
+        * {
+          box-sizing: border-box;
+        }
+        #lnb_grid > #right .column {
+            float: right;
+            transition: 0.3s;
+            border-radius: 50%;
+            padding: 5px;
+            filter: grayscale(100%);
+            opacity: 55%;
+        }
+        #lnb_grid > #right .column:hover {
+            opacity: 1;
+            border-radius: 50%;
+            padding: 5px;
+            filter: brightness(100%);
+        }
+        #lnb_grid > #right :not(#opacity) {
+            filter: grayscale(0%);
+            opacity: 100%;
+        }
+    </style>
+    </style>
+    <!--내용-->
+    <style>
+        #grid {
+            /* 중앙 정렬*/
+            width: 1060px; margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+        }
+        #grid > #left {
+            padding: 30px;
+            line-height: 20px;
+            color: #232a34;
+            background-color: #eeeeee;
+        }
+        #lnb_gid > #right .img { 
+            border: #ffffff;
+            opacity: 0.5;
+        }
+        #lnb_gid > #right .img {
+            opacity: 1.0;
+        }
+    </style>
+    <style>
+        .top {
+            right: 50px; bottom: 30px;
+            position: fixed;
+            display: inline-block;
+            background-image: url("top.png") no-repeat;
+            transition: 0.3s;
+            border-radius: 50%;
+            box-shadow: 1px 2px 5px #c5c5c5;
+        }
+        .top .img_top {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            border-radius: 50%;
+            box-shadow: 1px 2px 5px #c5c5c5;
+        }
+        .top:hover .img_top {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <div id="title">
+            <a href="index.html"><img src="title.png" width="200px"></a>
+        </div>
+        <nav id="main_gnb">
+            <ul> 
+                <il><a href="pm-leaflet-1.html" class="button">Printed Matter</a></il>
+                <il><a href="wa-app-1.html" class="button">Web & App</a></il>
+            </ul>
+        </nav>
+    </header>
+    <nav id="lnb_grid">
+        <div id="left">
+            <div class="box"></div>
+        </div>
+        <div id="right">
+            <div class="row">
+                <div class="column" id="opacity">
+                    <a href="wa-sms-link.html"><img src="80x80-sms-link.png" width="50px"></a>
+                </div>
+                <div class="column" id="opacity">
+                    <a href="wa-app-7.html"><img src="80x80-app-7.png" width="50px"></a>
+                </div>
+                <div class="column" id="opacity">
+                    <a href="wa-app-6.html"><img src="80x80-app-6.png" width="50px"></a>
+                </div>
+                <div class="column" id="opacity">
+                    <a href="wa-app-5.html"><img src="80x80-app-5.png" width="50px"></a>
+                </div>
+                <div class="column">
+                    <a href="wa-app-4.html"><img src="80x80-app-4.png" width="50px"></a>
+                </div>
+                <div class="column" id="opacity">
+                    <a href="wa-app-3.html"><img src="80x80-app-3.png" width="50px"></a>
+                </div>
+                <div class="column" id="opacity">
+                    <a href="wa-app-2.html"><img src="80x80-app-2.png" width="50px"></a>
+                </div>
+                <div class="column" id="opacity">
+                    <a href="wa-app-1.html"><img src="80x80-app-1.png" width="50px"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="grid">
+        <div id="left">
+            <h2>Applicaion</h2>
+            <h4>Icon & Splash Screen</h4>   
+            <p>중소규모의 슈퍼마켓 및 마트를 대상으로 개발된 앱 플랫폼을 제공하는 서비스로 각 업체에마다 아이콘과 스플래시 스크린을 디자인하여 앱 출시하였습니다.</p>
+            <p>대부분의 거래처에 로고가 없는 경우가 많아 로고 디자인부터 앱 출시까지 진행하였으며, 앱 출시의 경우에는 개발자가 구글플레이스토어와 앱스토어에 빌드 업로드 후 다음 작업을 진행하여 다수의 앱 출시한 경험이 있습니다.</p>
+            <br>
+            <img src="Adobe_Photoshop_CC_icon.png" width="30px">
+            <img src="Adobe_Illustrator_CC_icon.png" width="30px">
+        </div>
+        <div id="right">
+            <img src="app-mockup-4.jpg" width="760px">
+        </div>
+    </div>
+    <div class="top">
+        <img src="top.png" art="top">
+        <a href="#" target="_top"><img src="top_mo.png" class="img_top" art="home"></a>
+    </div>
+</body>
+</html>
