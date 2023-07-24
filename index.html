@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-title" content="Portfolio">
-    <meta name="description" content="2022 Portfolio">
-    <!--초기화-->
+    <title>복사본2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  
+    <!-- Demo styles -->
     <style>
+        
         a {
         margin:0;
         padding:0;
@@ -17,11 +18,7 @@
         }
         a:link {text-decoration:none; color:#353535;}
         a:visited {text-decoration:none; color:#353535;}
-        p {font-size: 13px; font-family: Arial, Helvetica, sans-serif; line-height: 170%; text-align: justify; text-indent: 10px;}
-        
-    </style>
-    <!--헤더-->
-    <style>
+        p {font-size: 13px; font-family: Arial, Helvetica, sans-serif; line-height: 170%; text-align: justify; text-indent: 10px;} 
         #main_header {
             /* 중앙 정렬*/
             width: 1060px; margin: 0 auto;
@@ -29,16 +26,17 @@
             height: 150px;
             position: relative;
             }
-        #main_header > #title {
+        #title {
             position: absolute;
-            left: 0px; top: 33px;
+            left: 0px; 
+            top: 44px;
             }   
-        #main_header > #main_gnb {
+        #main_gnb {
             position: absolute;
-            right: 0px; top: 20px;
+            right: 0px; top: 28px;
             font-size: small
             }
-        #main_header > #main_gnb .button {
+        .button {
             width: 100px;
             height: 13px;
             border: 10px solid #ffffff;
@@ -53,35 +51,96 @@
             transition: 0.5s;
             font-size: 12px;
         }
-        #main_header > #main_gnb .button:hover {
+        .button:hover {
             background-color: #ffb20b;
             color: #ffffff;
         }
-    </style>
-    <style>
-    #container {
-        /* 중앙 정렬*/
-        width: 1060px; margin: 0 auto;
-        /*절대 좌표*/
-        height: 300px;
-        position: relative;
+
+        .swiper {
+            width: 1060px;
+            height: 78%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #slide1 {
+            background: #ffb20b;
+            color: #fff;
+        }
+        #slide2 {
+            background-color: #c5c5c5;
+        }
+        #slide3 {
+            background: linear-gradient(#ffb20b, #c5c5c5);
         }
     </style>
-</head>
-<body>
-    <header id="main_header">
-        <div id="title">
-            <a href="Portfolio-main.html"><img src="title.png" width="200px"></a>
+  </head>
+  
+  <body>
+    <body data-lang="ko" class="fp-viewing-page1" style="overflow: hidden; height: 100%;">
+        <header id="main_header">
+            <div id="title">
+                <a href="Portfolio-main.html"><img src="title.png" width="200px"></a>
+            </div>
+            <nav id="main_gnb">
+                <ul> 
+                    <il><a href="pm-flyer.html" class="button">Printed Matter</a></il>
+                    <il><a href="wa-web-1.html" class="button">Web & App</a></il>
+                </ul>
+            </nav>
+        </header>
+    <!-- Swiper -->
+    <div class="swiper mySwiper swiper-initialized swiper-vertical swiper-backface-hidden">
+        <div class="swiper-wrapper" id="swiper-wrapper-8725b1cfac1ce6c1" aria-live="polite">
+            <div class="swiper-slide" id="slide1" role="group" aria-label="1 / 3" style="height: 764px; margin-bottom: 30px;">
+                <img src="swiper-02.jpg" height="765px">
+            </div>
+            <div class="swiper-slide" id="slide2" role="group" aria-label="2 / 3" style="height: 764px; margin-bottom: 30px;">
+                <img src="swiper-04.jpg" height="765px">
+            </div>
+            <div class="swiper-slide" id="slide3" role="group" aria-label="3 / 3" style="height: 764px; margin-bottom: 30px;">
+                <img src="swiper-01.jpg" height="765px">
+            </div>
         </div>
-        <nav id="main_gnb">
-            <ul> 
-                <il><a href="pm-flyer.html" class="button">Printed Matter</a></il>
-                <il><a href="wa-web-1.html" class="button">Web & App</a></il>
-            </ul>
-        </nav>
-    </header>
-        <div id="container">
-            <img src="main-img-1.jpg" alt="main" width="1060px"/>
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-vertical">
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span>
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+            <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
         </div>
-</body>
-</html>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+  
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        slidesPerView: 1,
+        mousewheel: true,
+        observer: true,
+        observeParents: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  
+  
+  
+  </body></html>
